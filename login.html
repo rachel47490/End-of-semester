@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login | APESCO Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="login-layout">
+    <section class="login-photo">
+      <img
+        class="login-photo-image"
+        src="C.jpeg"
+        alt="Students gathered for a school assembly at APESCO"
+      >
+      <div class="login-brand">
+        <img src="LOGO.jpeg" alt="">
+        <div>
+          <h1>APESCO</h1>
+          <p>Arua Public Secondary School</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="login card">
+      <h2>Portal login</h2>
+      <form id="login">
+        <label>
+          Role
+          <select name="role">
+            <option value="admin">Admin</option>
+            <option value="teacher">Teacher</option>
+            <option value="student">Student</option>
+            <option value="parent">Parent</option>
+          </select>
+        </label>
+
+        <label>
+          Username
+          <input name="user" required>
+        </label>
+
+        <label>
+          Password
+          <input name="pass" type="password" required>
+        </label>
+
+        <button class="btn" type="submit">Log in</button>
+      </form>
+
+      <p>
+        <small>
+          Demo: any username and password works.
+          <a href="index.html">Back to website</a>
+        </small>
+      </p>
+    </section>
+  </main>
+
+  <script src="portal.js"></script>
+</body>
+</html>

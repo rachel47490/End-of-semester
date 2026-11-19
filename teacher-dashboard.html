@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teacher | APESCO Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-role="teacher">
+  <div class="app">
+    <aside class="side">
+      <h2>APESCO</h2>
+      <a href="#results">Enter results</a>
+      <a href="#attendance">Attendance</a>
+      <a href="#timetable">Timetable</a>
+      <a href="index.html">Public website</a>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <h1>Teacher dashboard</h1>
+        <div>
+          Signed in as <b class="uname"></b>
+          <button class="btn" type="button" id="out">Log out</button>
+        </div>
+      </header>
+
+      <div class="stats" aria-label="Teacher summary">
+        <div class="card stat"><b>4</b>Classes</div>
+        <div class="card stat"><b>160</b>Students</div>
+        <div class="card stat"><b>2</b>Marks pending</div>
+      </div>
+
+      <section aria-labelledby="results">
+        <h2 id="results">Enter results (S.3 Mathematics)</h2>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Student</th>
+                <th scope="col">Mark /100</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Okello James</td>
+                <td><input type="number" min="0" max="100" aria-label="Okello James mark"></td>
+              </tr>
+              <tr>
+                <td>Aber Sarah</td>
+                <td><input type="number" min="0" max="100" aria-label="Aber Sarah mark"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="attendance">
+        <h2 id="attendance">Mark attendance</h2>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Student</th>
+                <th scope="col">Present</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Okello James</td>
+                <td><input type="checkbox" checked aria-label="Okello James present"></td>
+              </tr>
+              <tr>
+                <td>Aber Sarah</td>
+                <td><input type="checkbox" checked aria-label="Aber Sarah present"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="timetable">
+        <h2 id="timetable">My timetable</h2>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Time</th>
+                <th scope="col">Class</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Monday</td><td>8:00</td><td>S.3A</td></tr>
+              <tr><td>Tuesday</td><td>10:00</td><td>S.2B</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="portal.js"></script>
+</body>
+</html>

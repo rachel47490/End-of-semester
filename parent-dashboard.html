@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parent | APESCO Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-role="parent">
+  <div class="app">
+    <aside class="side">
+      <h2>APESCO</h2>
+      <a href="#results">Child results</a>
+      <a href="#fees">Fees</a>
+      <a href="#notices">Notices</a>
+      <a href="index.html">Public website</a>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <h1>Parent dashboard</h1>
+        <div>
+          Signed in as <b class="uname"></b>
+          <button class="btn" type="button" id="out">Log out</button>
+        </div>
+      </header>
+
+      <div class="stats" aria-label="Child summary">
+        <div class="card stat"><b>Okello James</b>Child</div>
+        <div class="card stat"><b>94%</b>Attendance</div>
+        <div class="card stat"><b>UGX 150,000</b>Fee balance</div>
+      </div>
+
+      <section aria-labelledby="results">
+        <h2 id="results">Child results</h2>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Subject</th>
+                <th scope="col">Mark</th>
+                <th scope="col">Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mathematics</td>
+                <td>78</td>
+                <td>A</td>
+              </tr>
+              <tr>
+                <td>English</td>
+                <td>69</td>
+                <td>B</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="fees">
+        <h2 id="fees">Fees</h2>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Item</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Paid</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tuition</td>
+                <td>UGX 450,000</td>
+                <td>UGX 300,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="notices">
+        <h2 id="notices">Notices</h2>
+        <ul>
+          <li>Parents meeting this Saturday.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <script src="portal.js"></script>
+</body>
+</html>

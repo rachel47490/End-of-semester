@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin | APESCO Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-role="admin">
+  <div class="app">
+    <aside class="side">
+      <h2>APESCO</h2>
+      <a href="#users">Users</a>
+      <a href="#notices">Notices</a>
+      <a href="#records">Records</a>
+      <a href="index.html">Public website</a>
+    </aside>
+
+    <main class="main">
+      <header class="top">
+        <h1>Admin dashboard</h1>
+        <div>
+          Signed in as <b class="uname"></b>
+          <button class="btn" type="button" id="out">Log out</button>
+        </div>
+      </header>
+
+      <div class="stats" aria-label="School summary">
+        <div class="card stat"><b>842</b>Students</div>
+        <div class="card stat"><b>48</b>Teachers</div>
+        <div class="card stat"><b>72%</b>Fees collected</div>
+      </div>
+
+      <section aria-labelledby="users">
+        <h2 id="users">Users</h2>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Role</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Achan Grace</td><td>Teacher</td><td>Active</td></tr>
+              <tr><td>Okello James</td><td>Student</td><td>Active</td></tr>
+              <tr><td>Drateru Peter</td><td>Parent</td><td>Active</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="notices">
+        <h2 id="notices">Post a notice</h2>
+        <form id="nform">
+          <label>
+            Notice
+            <input name="t" required>
+          </label>
+          <button class="btn" type="submit">Publish notice</button>
+        </form>
+        <ul id="nlist">
+          <li>Term 3 exams begin next month.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="records">
+        <h2 id="records">School records</h2>
+        <div class="tw">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Class</th>
+                <th scope="col">Students</th>
+                <th scope="col">Class teacher</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>S.1</td><td>210</td><td>[Name]</td></tr>
+              <tr><td>S.2</td><td>200</td><td>[Name]</td></tr>
+              <tr><td>S.3</td><td>220</td><td>[Name]</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p><small>Sample data for demonstration.</small></p>
+    </main>
+  </div>
+  <script src="portal.js"></script>
+</body>
+</html>
