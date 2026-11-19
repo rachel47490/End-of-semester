@@ -28,6 +28,29 @@ if (menuToggle && homeNavigation) {
   });
 }
 
+const noticeSearch = document.getElementById('notice-search');
+const noticeList = document.getElementById('school-notices');
+const noticeCount = document.getElementById('notice-count');
+const noticeEmpty = document.getElementById('notice-empty');
+
+if (noticeSearch && noticeList && noticeCount && noticeEmpty) {
+  const notices = Array.from(noticeList.children);
+
+  noticeSearch.addEventListener('input', () => {
+    const query = noticeSearch.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    notices.forEach(notice => {
+      const matches = notice.textContent.toLowerCase().includes(query);
+      notice.hidden = !matches;
+      if (matches) visibleCount += 1;
+    });
+
+    noticeCount.textContent = `Showing ${visibleCount} ${visibleCount === 1 ? 'notice' : 'notices'}`;
+    noticeEmpty.hidden = visibleCount > 0;
+  });
+}
+
 document.querySelectorAll('form[data-demo]').forEach(form => {
   form.addEventListener('submit', event => {
     event.preventDefault();
