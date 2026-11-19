@@ -313,6 +313,26 @@ section h2 {
   padding: 1.25rem;
 }
 
+.offer-card {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.offer-card:hover,
+.offer-card:focus-visible {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgb(16 42 67 / 12%);
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: .75rem;
+  color: var(--g);
+  font-weight: 700;
+}
+
 .card h3 {
   margin-bottom: .4rem;
 }
@@ -564,6 +584,35 @@ section h2 {
 
 .notices-heading h2 {
   margin-bottom: .5rem;
+}
+
+.notice-search {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) 1fr;
+  align-items: center;
+  gap: .35rem 1rem;
+  margin-bottom: 1rem;
+}
+
+.notice-search label {
+  grid-column: 1 / -1;
+}
+
+.notice-search input {
+  width: 100%;
+  background: #fff;
+}
+
+.notice-count {
+  color: var(--g2);
+  font-size: .9rem;
+}
+
+.notice-empty {
+  padding: 1.25rem;
+  border: 1px dashed var(--ln);
+  border-radius: 8px;
+  background: #fff;
 }
 
 .notices {
@@ -881,6 +930,15 @@ td input {
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto;
+  }
+
+  .offer-card {
+    transition: none;
+  }
+
+  .offer-card:hover,
+  .offer-card:focus-visible {
+    transform: none;
   }
 }
 
