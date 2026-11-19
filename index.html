@@ -49,18 +49,21 @@
       <div class="wrap">
         <h2>What we offer</h2>
         <div class="grid">
-          <div class="card">
+          <a class="card offer-card" href="academics.html">
             <h3>Quality teaching</h3>
             <p>Experienced teachers guiding every learner.</p>
-          </div>
-          <div class="card">
+            <span class="card-link">Explore academics</span>
+          </a>
+          <a class="card offer-card" href="login.html">
             <h3>Online portal</h3>
             <p>Results, fees, attendance and timetables in one place.</p>
-          </div>
-          <div class="card">
+            <span class="card-link">Open the portal</span>
+          </a>
+          <a class="card offer-card" href="contact.html">
             <h3>Clear communication</h3>
             <p>Notices reach parents and students quickly.</p>
-          </div>
+            <span class="card-link">Contact the school</span>
+          </a>
         </div>
       </div>
     </section>
@@ -72,12 +75,18 @@
           <h2>School Notices</h2>
           <p>Important reminders and updates for students, parents and guardians.</p>
         </div>
-        <ul class="notices">
+        <div class="notice-search">
+          <label for="notice-search">Search notices</label>
+          <input id="notice-search" type="search" placeholder="Try “examinations” or a date">
+          <p id="notice-count" class="notice-count" aria-live="polite">Showing 4 notices</p>
+        </div>
+        <ul class="notices" id="school-notices">
           <li><b>27/11/2026</b> Term 3 end-of-term examinations begin on 23/11/2026. Candidates should report by 7:30 am with their own stationery.</li>
           <li><b>28/11/2026</b> Parents and guardians are invited to a meeting on 29/11/2026 at 9:00am in the school hall.</li>
           <li><b>29/11/2026</b> School fees for Term 3 should be cleared by 30/11/2026. Check your child's balance on the portal.</li>
           <li><b>30/11/2026</b> Admissions for S.1 and S.5 are now open. Application forms are available online and at the school office.</li>
         </ul>
+        <p id="notice-empty" class="notice-empty" hidden>No notices match your search. Try another word or date.</p>
       </div>
     </section>
   </main>
