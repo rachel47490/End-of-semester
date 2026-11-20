@@ -43,7 +43,10 @@
 
         <label>
           Password
-          <input name="pass" type="password" required>
+          <div class="password-wrap">
+            <input name="pass" type="password" required>
+            <button class="password-toggle" type="button" aria-label="Show password">Show</button>
+          </div>
         </label>
 
         <button class="btn" type="submit">Log in</button>
@@ -58,6 +61,7 @@
     </section>
   </main>
 
+  <script src="js/api.js"></script>
   <script src="portal.js"></script>
 </body>
 </html>

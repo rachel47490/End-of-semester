@@ -37,23 +37,30 @@
         <h2>Latest updates</h2>
         <p>Keep up with the latest announcements from APESCO.</p>
       </div>
+      <div class="filter-pills" aria-label="Filter news">
+        <button class="filter-pill active" type="button" data-filter="all">All</button>
+        <button class="filter-pill" type="button" data-filter="academics">Academics</button>
+        <button class="filter-pill" type="button" data-filter="parents">Parents &amp; Guardians</button>
+        <button class="filter-pill" type="button" data-filter="fees">Fees</button>
+        <button class="filter-pill" type="button" data-filter="admissions">Admissions</button>
+      </div>
       <div class="grid news-grid">
-        <article class="card news-card">
+        <article class="card news-card" data-category="academics">
           <p class="news-category">Academics</p>
           <h3>Term 3 examinations</h3>
           <p>Examinations begin on 23 November. Candidates should report by 7:30 a.m. with their own stationery.</p>
         </article>
-        <article class="card news-card">
+        <article class="card news-card" data-category="parents">
           <p class="news-category">Parents &amp; guardians</p>
           <h3>Parents’ meeting</h3>
           <p>Parents and guardians are invited to meet at the school hall on 29 November. Contact the school office for the meeting time.</p>
         </article>
-        <article class="card news-card">
+        <article class="card news-card" data-category="fees">
           <p class="news-category">Fees</p>
           <h3>Term 3 school fees</h3>
           <p>Please clear Term 3 fees by 30 November. Parents can check their child’s balance on the portal.</p>
         </article>
-        <article class="card news-card">
+        <article class="card news-card" data-category="admissions">
           <p class="news-category">Admissions</p>
           <h3>S.1 and S.5 applications</h3>
           <p>Applications are open. Contact the school office for the official application form and current requirements.</p>
@@ -67,6 +74,7 @@
 <footer>
   <div class="wrap">&copy; 2026 Arua Public Secondary School (APESCO). Arua, Uganda.</div>
 </footer>
-<script src="main.js"></script>
+<script src="js/api.js"></script>
+<script src="app.js"></script>
 </body>
 </html>

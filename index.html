@@ -75,18 +75,27 @@
           <h2>School Notices</h2>
           <p>Important reminders and updates for students, parents and guardians.</p>
         </div>
-        <div class="notice-search">
-          <label for="notice-search">Search notices</label>
-          <input id="notice-search" type="search" placeholder="Try “examinations” or a date">
+        <div class="notice-toolbar">
+          <div class="search-box">
+            <input id="notice-search" type="search" placeholder="Try 'examinations' or a date" aria-label="Search notices">
+            <button class="clear-search" type="button" aria-label="Clear notice search" title="Clear search">×</button>
+          </div>
+          <select id="notice-category" aria-label="Filter notices by category">
+            <option value="all">All categories</option>
+            <option value="academics">Academics</option>
+            <option value="parents">Parents &amp; Guardians</option>
+            <option value="fees">Fees</option>
+            <option value="admissions">Admissions</option>
+          </select>
           <p id="notice-count" class="notice-count" aria-live="polite">Showing 4 notices</p>
         </div>
         <ul class="notices" id="school-notices">
-          <li><b>27/11/2026</b> Term 3 end-of-term examinations begin on 23/11/2026. Candidates should report by 7:30 am with their own stationery.</li>
-          <li><b>28/11/2026</b> Parents and guardians are invited to a meeting on 29/11/2026 at 9:00am in the school hall.</li>
-          <li><b>29/11/2026</b> School fees for Term 3 should be cleared by 30/11/2026. Check your child's balance on the portal.</li>
-          <li><b>30/11/2026</b> Admissions for S.1 and S.5 are now open. Application forms are available online and at the school office.</li>
+          <li data-category="academics"><b>27/11/2026</b> Term 3 end-of-term examinations begin on 23/11/2026. Candidates should report by 7:30 am with their own stationery.</li>
+          <li data-category="parents"><b>28/11/2026</b> Parents and guardians are invited to a meeting on 29/11/2026 at 9:00am in the school hall.</li>
+          <li data-category="fees"><b>29/11/2026</b> School fees for Term 3 should be cleared by 30/11/2026. Check your child's balance on the portal.</li>
+          <li data-category="admissions"><b>30/11/2026</b> Admissions for S.1 and S.5 are now open. Application forms are available online and at the school office.</li>
         </ul>
-        <p id="notice-empty" class="notice-empty" hidden>No notices match your search. Try another word or date.</p>
+        <p id="notice-empty" class="notice-empty" hidden>No matching notices found</p>
       </div>
     </section>
   </main>
@@ -95,6 +104,7 @@
     <div class="wrap">&copy; 2026 Arua Public Secondary School(APESCO). Arua, Uganda.</div>
     <div class="wrap">Built with ❤️ Ayuen Rachel Lueth</div>
   </footer>
-  <script src="main.js"></script>
+  <script src="js/api.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
