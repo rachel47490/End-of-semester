@@ -12,8 +12,8 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font:16px/1.65 "Inter","Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--cream)}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font:16px/1.65 "Inter","Segoe UI",system-ui,sans-serif;color:var(--ink);background:var(--cream);overflow-x:clip}
 img{max-width:100%}
 a{color:var(--navy)}
 button,input,select,textarea{font:inherit}
@@ -86,11 +86,11 @@ main section>p{color:var(--slate)}
 
 .admissions-section{background:#eff2f5}
 .admissions-heading{text-align:center;max-width:650px;margin:0 auto 2rem}
-.admissions-layout{display:grid;grid-template-columns:1.4fr .8fr;gap:1.25rem}
-.application-steps{display:grid;grid-template-columns:1fr 1fr;gap:1rem;list-style:none}
-.application-step{background:#fff;border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:10px;padding:1.35rem;box-shadow:0 8px 22px rgba(15,41,66,.05)}
+.admissions-layout{display:block}
+.application-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;list-style:none}
+.application-step{min-height:220px;background:#fff;border:1px solid var(--border);border-top:4px solid var(--gold);border-radius:10px;padding:1.35rem;box-shadow:0 8px 22px rgba(15,41,66,.05)}
 .step-number{display:grid;width:44px;height:44px;margin-bottom:.75rem;place-items:center;border-radius:50%;background:var(--navy);color:#fff;font-weight:850}
-.admissions-aside{display:grid;gap:1rem}
+.admissions-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start;gap:1.25rem;margin-top:1.75rem}
 .application-note,.application-demo-card{border-radius:12px;padding:1.35rem}
 .application-note{background:var(--navy);color:#fff}
 .application-note .btn{margin-top:1rem}
@@ -178,14 +178,15 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:1
 
 @media(max-width:900px){
   .grid,.news-grid,.value-grid{grid-template-columns:1fr 1fr}
-  .admissions-layout,.contact-layout{grid-template-columns:1fr}
+  .application-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contact-layout{grid-template-columns:1fr}
   .login-layout{grid-template-columns:1fr}.login-photo{min-height:280px}.workspace-grid{grid-template-columns:1fr 1fr}
   .app{grid-template-columns:170px 1fr}
 }
 @media(max-width:720px){
   .site-header .wrap{min-height:68px}.menu-toggle{display:block}.site-nav{position:fixed;z-index:60;top:68px;right:0;bottom:0;width:min(86%,330px);display:flex;flex-direction:column;align-items:stretch;gap:.2rem;padding:1rem;background:var(--navy);transform:translateX(100%);transition:.25s}.site-nav.is-open{transform:none}.site-nav a{padding:.85rem}.site-nav .btn{margin-top:.5rem}.menu-backdrop{position:fixed;z-index:55;inset:68px 0 0;background:rgba(0,0,0,.45)}.menu-backdrop.visible{display:block}
   .hero{min-height:330px}.home-hero{min-height:430px}.admissions-hero .wrap{grid-template-columns:1fr}.admissions-hero-visual{width:240px}
-  .grid,.news-grid,.value-grid,.faq-grid,.application-steps,.contact-links,.notices{grid-template-columns:1fr}.notice-toolbar{grid-template-columns:1fr}.workspace-shell{grid-template-columns:1fr}.workspace-sidebar{position:static}.workspace-grid{grid-template-columns:1fr}.workspace-main{padding:1.25rem}.workspace-top{align-items:flex-start;gap:1rem}
+  .grid,.news-grid,.value-grid,.faq-grid,.application-steps,.admissions-actions,.contact-links,.notices{grid-template-columns:1fr}.notice-toolbar{grid-template-columns:1fr}.workspace-shell{grid-template-columns:1fr}.workspace-sidebar{position:static}.workspace-grid{grid-template-columns:1fr}.workspace-main{padding:1.25rem}.workspace-top{align-items:flex-start;gap:1rem}
   footer .wrap{flex-direction:column;text-align:center}.footer-credit{text-align:center}
   .app{grid-template-columns:1fr}.side{display:flex;overflow-x:auto}.side h2{display:none}.side a{white-space:nowrap}.main{padding:1.25rem}.top{align-items:flex-start}.stats{grid-template-columns:1fr}.login-layout{padding:1rem}.login-photo{min-height:230px}.login.card{padding:1.25rem}
 }
