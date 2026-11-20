@@ -124,6 +124,9 @@ input,select,textarea{width:100%;border:1px solid #cbd1d8;border-radius:7px;back
 .contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:2.5rem}
 .contact-layout form{max-width:none}
 .character-count{text-align:right;color:var(--slate);font-size:.82rem}
+.contact-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.contact-card{display:flex;align-items:center;gap:1rem;padding:1.25rem}
+.contact-card a,.contact-card p{overflow-wrap:anywhere}
 
 .notices-section{background:#eff2f5}
 .notice-toolbar{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:.75rem;align-items:end;margin:1.25rem 0}
